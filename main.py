@@ -81,8 +81,9 @@ class PDFQA:
             raise ValueError("QA 시스템이 초기화되지 않았습니다. 먼저 initialize_qa()를 호출하세요.")
         print(f"질문 처리 중: {question}")
         start_time = time.time()
-        result = self.qa({"question": question, "chat_history": self.memory.load_memory_variables({"output_key": "answer"})})
+        result = self.qa({"question": question, "chat_history": self.memory.chat_memory})
         print(f"질문 처리 완료: {question} in {time.time() - start_time} seconds")
+        self.memory.save_context({"question": question}, {"answer": result['answer']})
         return result
 
     def add_pdfs(self):
