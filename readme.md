@@ -13,8 +13,8 @@ PDFQA는 PDF 문서에서 정보를 검색하고 질문에 답변하는 Python �
 1. 이 리포지토리를 클론합니다.
 
     ```bash
-    git clone https://github.com/your-username/pdfqa.git
-    cd pdfqa
+    git clone https://github.com/yujinjung-git/RAG
+    cd RAG
     ```
 
 2. 가상환경을 생성하고 활성화합니다.
@@ -35,7 +35,7 @@ PDFQA는 PDF 문서에서 정보를 검색하고 질문에 답변하는 Python �
 1. 프로그램을 실행할 때 Google API 키를 명령줄 인수로 전달합니다.
 
     ```bash
-    python pdfqa.py --api_key "YOUR_GOOGLE_API_KEY"
+    python main.py --api_key "YOUR_GOOGLE_API_KEY"
     ```
 
 2. 실행 후, 추가할 PDF 파일의 경로를 입력합니다.
