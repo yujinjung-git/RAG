@@ -12,12 +12,12 @@ class Retriever:
         # Initialize embeddings
         self.ko_embeddings = HuggingFaceEmbeddings(
             model_name=embedding_model,
-            encode_kwargs={'normalize_embeddings': True}
+            encode_kwargs={'normalize_embeddings': True, 'batch_size': 16}
         )
 
         # Initialize text splitters
-        self.child_splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=50)
-        self.parent_splitter = RecursiveCharacterTextSplitter(chunk_size=1800, chunk_overlap=100)
+        self.child_splitter = RecursiveCharacterTextSplitter(chunk_size=300)
+        self.parent_splitter = RecursiveCharacterTextSplitter(chunk_size=1000)
 
         # Initialize vector stores
         self.vectorstore = Chroma(
@@ -41,6 +41,8 @@ class Retriever:
     def load_pdfs(self, file_paths):
         docs = []
         for file_path in file_paths:
+            if not file_path.lower().endswith('.pdf'):
+                raise ValueError(f"유효하지 않은 파일 확장자: {file_path}. PDF 파일만 지원됩니다.")
             print(f"Loading PDF: {file_path}")
             start_time = time.time()
             loader = PyPDFLoader(file_path)

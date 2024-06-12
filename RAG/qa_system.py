@@ -10,8 +10,16 @@ class QASystem:
         self.google_api_key = google_api_key
         self.retriever = retriever
 
+        generation_config = {
+            "temperature": 0.9,
+            "top_p": 1,
+            "top_k": 1,
+            "max_output_tokens": 2048,
+        }
+
         # Initialize LLM
-        self.llm = ChatGoogleGenerativeAI(model=model_name, api_key=google_api_key)
+        self.llm = ChatGoogleGenerativeAI(model=model_name, api_key=google_api_key, generation_config=generation_config)
+
 
         # Initialize memory
         self.memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True, output_key='answer')
@@ -42,12 +50,18 @@ class QASystem:
     def add_pdfs(self):
         file_paths_input = input("추가할 PDF 파일들의 경로를 콤마(,)로 구분하여 입력하세요: ")
         file_paths = [fp.strip() for fp in file_paths_input.split(',')]
-        self.load_pdfs(file_paths)
+        try:
+            self.load_pdfs(file_paths)
+        except ValueError as e:
+            print(e)
+            return
         self.initialize_qa()
 
     def load_pdfs(self, file_paths):
         docs = []
         for file_path in file_paths:
+            if not file_path.lower().endswith('.pdf'):
+                raise ValueError(f"유효하지 않은 파일 확장자: {file_path}. PDF 파일만 지원됩니다.")
             print(f"Loading PDF: {file_path}")
             start_time = time.time()
             loader = PyPDFLoader(file_path)

@@ -1,4 +1,4 @@
-# PDFQA : LLM 기반 RAG 시스템을 활용한 PDFQA
+# PDFQA : RAG-Based Chatbot Prototype
 
 PDFQA는 PDF 문서에서 정보를 검색하고 질문에 답변하는 Python 기반의 시스템입니다. 이 프로그램은 Google Generative AI와 LangChain을 사용해 구현했습니다.
 
@@ -74,25 +74,11 @@ PDFQA는 PDF 문서에서 정보를 검색하고 질문에 답변하는 Python �
 ## 프로그램 구조
 
 ```plaintext
-+-----------------------------------------------------+
-|                      PDFQA                          |
-+-----------------------------------------------------+
-| __init__(google_api_key, model_name, embedding_model)|
-| - ChatGoogleGenerativeAI                             |
-| - HuggingFaceEmbeddings                              |
-| - RecursiveCharacterTextSplitter                     |
-| - Chroma                                             |
-| - InMemoryStore                                      |
-| - ParentDocumentRetriever                            |
-| - ConversationBufferMemory                           |
-| - ConversationalRetrievalChain                       |
-|                                                     |
-| Methods:                                            |
-| - load_pdfs(file_paths)                              |
-| - initialize_qa()                                    |
-| - ask_question(question)                             |
-| - add_pdfs()                                         |
-| - print_chat_history()                                |
-| - run()                                              |
-+-----------------------------------------------------+
-
+RAG
+|-- main.py
+|-- RAG/
+    |-- __init__.py
+    |-- qa_system.py
+    |-- retriever.py
+|-- README.md
+|-- requirements.txt
