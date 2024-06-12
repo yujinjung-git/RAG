@@ -1,4 +1,4 @@
-# PDFQA 시스템
+# PDFQA : LLM 기반 RAG 시스템을 활용한 PDFQA
 
 PDFQA는 PDF 문서에서 정보를 검색하고 질문에 답변하는 Python 기반의 시스템입니다. 이 프로그램은 Google Generative AI와 LangChain을 사용해 구현했습니다.
 
