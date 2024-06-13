@@ -140,8 +140,9 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 - '추가': 새로운 PDF 파일을 추가합니다.
 - '기록': 현재 대화 히스토리를 출력합니다.
 - '종료': 프로그램을 종료합니다.
+
 <br/>
- <br/>
+
   - Ask questions: answer by searching for information in PDF files.
   - 'Add': Add new PDF files.
   - 'History': Outputs the current conversation history.
