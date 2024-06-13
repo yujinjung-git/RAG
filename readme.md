@@ -29,6 +29,8 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 
 ## 💿 설치 방법 / Installation
 
+
+<br/>
 1. 이 리포지토리를 클론합니다. <br/>Clone this repository.
 
     ```bash
@@ -57,7 +59,11 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 
 ## 👩🏻‍💻 사용 방법    / How to Start
 
+<br/>
+
 ### ☝🏻 터미널 사용 / Use a Terminal
+
+<br/>
 
 1. 프로그램을 실행할 때 Google API 키를 명령줄 인수로 전달합니다. <br/>Forward the Google API key to a command-line argument when you run the program.
 
@@ -69,16 +75,15 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 
 2. 실행 후, 추가할 PDF 파일의 경로를 입력합니다. <br/>After running, enter the path of PDF files you want to add.
 
-<br/>
-
 3. 명령어를 입력하여 프로그램을 사용합니다: <br/>Enter the command to use the program:
 
     - 질문하기: PDF 파일에서 정보를 검색하여 답변합니다.
     - '추가': 새로운 PDF 파일을 추가합니다.
     - '기록': 현재 대화 히스토리를 출력합니다.
     - '종료': 프로그램을 종료합니다.
-   <br/>
 <br/>
+   <br/>
+
    - Ask questions: answer by searching for information in PDF files.
    - 'Add': Add new PDF files.
    - 'History': Outputs the current conversation history.
@@ -89,9 +94,9 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 
 ### ✌🏻 IDE 사용 (PyCharm - MacOS) / Use an IDE
 
-1. PyCharm을 열고, `Open` 옵션을 선택하여 클론한 프로젝트 폴더를 엽니다. <br/> Open PyCharm, select the 'Open' option to open the cloned project folder. 
-<br/><br/>
+<br/>
 
+1. PyCharm을 열고, `Open` 옵션을 선택하여 클론한 프로젝트 폴더를 엽니다. <br/> Open PyCharm, select the 'Open' option to open the cloned project folder.
 2. PyCharm에서 가상환경을 설정합니다:
     - `PyCharm` -> `Settings` -> `Project: RAG` -> `Python Interpreter`
     - `Add Interpreter` -> `Existing environment`
@@ -99,44 +104,23 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
       - `<Project Path>/venv/bin/python`
       - Windows - `venv\Scripts\python.exe`
     - `OK`
-
-<br/>
-
 3. `Run` -> `Edit Configurations...`
-
-<br/>
-
 4. `Script path`에 `main.py` 경로를 설정합니다. <br/>Set the 'main.py ' path to 'Script path'.
-
-<br/>
-
 5. `Parameters`에 `--api_key "YOUR_GOOGLE_API_KEY"`를 추가합니다. <br/> Add `--api_key 'YOUR_GOOGLE_API_KEY'` to `Parameters`.
-
-<br/>
-
 6. `Apply` -> `OK`
-
-<br/>
-
 7. `Run` -> `Run 'main'`
-
-<br/>
-
 8. 실행 후, 터미널 창에서 추가할 PDF 파일의 경로를 입력합니다. <br/> After running, in the Terminal window, enter the path to the PDF file you want to add.
-
-<br/>
-
 9. 명령어를 입력하여 프로그램을 사용합니다: <br/>Enter the command to use the program:
     - 질문하기: PDF 파일에서 정보를 검색하여 답변합니다.
     - '추가': 새로운 PDF 파일을 추가합니다.
     - '기록': 현재 대화 히스토리를 출력합니다.
     - '종료': 프로그램을 종료합니다.
 <br/>
-<br/>
-   - Ask questions: answer by searching for information in PDF files.
-   - 'Add': Add new PDF files.
-   - 'History': Outputs the current conversation history.
-   - 'Exit': Exits the program.
+   <br/>
+    - Ask questions: answer by searching for information in PDF files.
+    - 'Add': Add new PDF files.
+    - 'History': Outputs the current conversation history.
+    - 'Exit': Exits the program.
 <br/>
 <br/>
 <br/>
@@ -155,5 +139,5 @@ RAG
 |-- requirements.txt
 ```
 ---
-# 
+
 
