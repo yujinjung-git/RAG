@@ -62,11 +62,11 @@ class QASystem:
         for file_path in file_paths:
             if not file_path.lower().endswith('.pdf'):
                 raise ValueError(f"유효하지 않은 파일 확장자: {file_path}. PDF 파일만 지원됩니다.")
-            print(f"Loading PDF: {file_path}")
+            print(f"PDF 로딩 중: {file_path}")
             start_time = time.time()
             loader = PyPDFLoader(file_path)
             docs.extend(loader.load_and_split())
-            print(f"Loaded PDF: {file_path} in {time.time() - start_time} seconds")
+            print(f"PDF 로딩 완료: {file_path} in {time.time() - start_time} seconds")
         self.retriever.add_documents(docs, ids=None)
         print("PDF 파일이 성공적으로 추가되었습니다.")
 
@@ -76,17 +76,17 @@ class QASystem:
 
     def run(self):
         while True:
-            query = input("\n명령어를 입력하세요 (질문, '추가', '기록', 'exit' 중 선택): ").strip()
-            if query.lower() in ['exit', '종료']:
-                print("프로그램을 종료합니다.")
+            query = input("\n명령어를 입력하세요 (질문하기, '추가', '기록', '종료' 중 선택): ").strip()
+            if query.lower() in ['종료', 'Exit']:
+                print("Exit the program.")
                 break
-            elif query.lower() == '추가':
+            elif query.lower() == ['추가', 'Add']:
                 self.add_pdfs()
-            elif query.lower() == '기록':
+            elif query.lower() == ['기록', 'History']:
                 self.print_chat_history()
             else:
                 result = self.ask_question(query)
                 print("\n응답:", result['answer'])
-                for doc in result['source_documents']:
-                    print("\n출처 문서:", doc.metadata['source'])
-                    print(doc.page_content)
+                '''for doc in result['source_documents']:
+                    print("\nsource document:", doc.metadata['source'])
+                    print(doc.page_content)'''
