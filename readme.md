@@ -10,6 +10,38 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 <br/>
 <br/>
 
+## 🖊️ Environment
+<img src="https://img.shields.io/badge/pycharm-000000?style=for-the-badge&logo=pycharm&logoColor=white">
+<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+
+
+
+<br/>
+
+## 📚 Stack
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+<img src="https://img.shields.io/badge/googlegemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white">
+<img src="https://img.shields.io/badge/langchain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white">
+<img src="https://img.shields.io/badge/huggingface-FFD21E?style=for-the-badge&logo=huggingface&logoColor=white">
+
+<br/>
+<br/>
+
+
+
+
+## 목차 / Table of Contents
+1. [💡 주요 기능 / Features](#-주요-기능--features)
+2. [💿 설치 방법 / Installation](#-설치-방법--installation)
+3. [👩🏻‍💻 사용 방법 / How to Start](#-사용-방법--how-to-start)
+   - [☝🏻 터미널 사용 / Use a Terminal](#-터미널-사용--use-a-terminal)
+   - [✌🏻 IDE 사용 (PyCharm - MacOS) / Use an IDE](#-ide-사용-pycharm---macos--use-an-ide)
+4. [📂 레포지토리 구조 / Repository Structure](#-레포지토리-구조--repository-structure)
+
+
+<br/>
+<br/>
+<br/>
 
 
 ## 💡 주요 기능 / Features
@@ -22,10 +54,10 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 - Search PDF files for answers to questions
 - Save and output a history of interactive questions and answers
 
+<br/>
+<br/>
+<br/>
 
-<br/>
-<br/>
-<br/>
 
 ## 💿 설치 방법 / Installation
 
@@ -152,7 +184,7 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 <br/>
 
 
-## 📂 레포지토리 구조
+## 📂 레포지토리 구조 / Repository Structure
 
 ```plaintext
 RAG
