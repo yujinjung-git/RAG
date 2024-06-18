@@ -121,6 +121,10 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
    <br/>
    <br/>
 
+
+<details>
+    <summary>✌🏻 IDE 사용 (PyCharm - MacOS) / Use an IDE</summary>
+
 ### ✌🏻 IDE 사용 (PyCharm - MacOS) / Use an IDE
 
 <br/>
@@ -128,6 +132,8 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 1. **PyCharm을 열고, `Open` 옵션을 선택하여 클론한 프로젝트 폴더를 엽니다.** <br/> Open PyCharm, select the 'Open' option to open the cloned project folder.
 
 <br/>
+
+
 
 2. **PyCharm에서 가상환경을 설정합니다:** <br/> In PyCharm, set up a virtual environment:
     - `PyCharm` -> `Settings` -> `Project: RAG` -> `Python Interpreter`
@@ -138,10 +144,23 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
     - `OK`
 
 <br/>
+<p align="center">
+  <img src="https://github.com/yujinjung-git/RAG/assets/64849647/0d750063-9b0b-4ab1-ab39-348a107b7b24">
+</p>
+<p align="center">
+  <img src="https://github.com/yujinjung-git/RAG/assets/64849647/2e509472-ace0-45b4-976c-b5dff7f52c19">
+</p>
+<br/>
+<p align="center">
+  <img src="https://github.com/yujinjung-git/RAG/assets/64849647/1197056f-97c3-49bc-83ab-c3c33665139d">
+</p>
 
 3. `Run` -> `Edit Configurations...`
 
 <br/>
+<p align="center">
+  <img src="https://github.com/yujinjung-git/RAG/assets/64849647/36a84c37-bb29-4f21-b752-cfb4d369ad26">
+</p>
 
 4. `Script path`에 `main.py` 경로를 설정합니다. <br/>Set the 'main.py ' path to 'Script path'.
 
@@ -150,6 +169,9 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 5. **`Parameters`에 `--api_key "YOUR_GOOGLE_API_KEY"`를 추가합니다.** <br/> Add `--api_key 'YOUR_GOOGLE_API_KEY'` to `Parameters`.
 
 <br/>
+<p align="center">
+  <img src="https://github.com/yujinjung-git/RAG/assets/64849647/c514232f-ff7d-4a3b-a70b-d71e6013a9fd">
+</p>
 
 6. `Apply` -> `OK`
 
@@ -158,6 +180,9 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 7. `Run` -> `Run 'main'`
 
 <br/>
+<p align="center">
+  <img src="https://github.com/yujinjung-git/RAG/assets/64849647/6236db4c-2c78-4f89-b629-b7e08f8ba465">
+</p>
 
 8. **실행 후, 터미널 창에서 추가할 PDF 파일의 경로를 입력합니다.** <br/> After running, in the Terminal window, enter the path to the PDF file you want to add.
 
@@ -179,8 +204,10 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 <br/>
 <br/>
 
+</details>
 
-## 📂 레포지토리 구조 / Repository Structure
+
+## 📂 구조 / Structure
 
 ```plaintext
 RAG
@@ -193,5 +220,9 @@ RAG
 |-- requirements.txt
 ```
 ---
+<p align="center">
+  <img src="https://github.com/yujinjung-git/RAG/assets/64849647/4005c138-a346-40a6-bfa0-be441f03b2fa">
+</p>
+
 
 

@@ -38,6 +38,10 @@ class Retriever:
             parent_splitter=self.parent_splitter,
         )
 
+    # 파일 경로를 참조해서 PDF 파일 로드 & 분할 / Loads and splits PDF files from the given file paths.
+    # 확장자 확인, .pdf 아닐 시 오류 발생 / Checks if each file has a .pdf extension, raising an error if not.
+    # 각 PDF 파일 로드 & 분할 소요 시간 출력 / Prints the start and completion time for loading each PDF file.
+    # 로드된 문서 리트리버에 추가 / Adds the loaded documents to the retriever.
     def load_pdfs(self, file_paths):
         docs = []
         for file_path in file_paths:
