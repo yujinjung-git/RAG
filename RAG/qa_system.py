@@ -13,6 +13,7 @@ class QASystem:
     def __init__(self, google_api_key, retriever, model_name='gemini-1.5-pro-latest'):
         self.google_api_key = google_api_key
         self.retriever = retriever
+        self.docs = []
 
         generation_config = {
             "temperature": 0.9,
@@ -65,16 +66,15 @@ class QASystem:
     # 각 PDF 파일 로드 & 분할 소요 시간 출력 / Prints the start and completion time for loading each PDF file.
     # 로드된 문서 리트리버에 추가 / Adds the loaded documents to the retriever.
     def load_pdfs(self, file_paths):
-        docs = []
         for file_path in file_paths:
             if not file_path.lower().endswith('.pdf'):
                 raise ValueError(f"유효하지 않은 파일 확장자: {file_path}. PDF 파일만 지원됩니다.")
             print(f"PDF 로딩 중: {file_path}")
             start_time = time.time()
             loader = PyPDFLoader(file_path)
-            docs.extend(loader.load_and_split())
+            self.docs.extend(loader.load_and_split())
             print(f"PDF 로딩 완료: {file_path} in {time.time() - start_time} seconds")
-        self.retriever.add_documents(docs, ids=None)
+        self.retriever.add_documents(self.docs, ids=None)
         print("PDF 파일이 성공적으로 추가되었습니다.")
 
     # 추가할 PDF 파일 경로 입력 요청 / Prompts the user to input the paths of PDF files to add.
@@ -107,12 +107,12 @@ class QASystem:
     def run(self):
         while True:
             query = input("\n명령어를 입력하세요 (질문하기, '추가', '기록', '종료' 중 선택): ").strip()
-            if query.lower() in ['종료', 'Exit']:
+            if query.lower() in ['종료', 'exit']:
                 print("Exit the program.")
                 break
-            elif query.lower() == ['추가', 'Add']:
+            elif query.lower() in ['추가', 'add']:
                 self.add_pdfs()
-            elif query.lower() == ['기록', 'History']:
+            elif query.lower() in ['기록', 'history']:
                 self.print_chat_history()
             else:
                 result = self.ask_question(query)

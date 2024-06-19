@@ -114,9 +114,9 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
  <br/>
 
    - Ask questions: answer by searching for information in PDF files.
-   - 'Add': Add new PDF files.
-   - 'History': Outputs the current conversation history.
-   - 'Exit': Exits the program.
+   - 'add': Add new PDF files.
+   - 'history': Outputs the current conversation history.
+   - 'exit': Exits the program.
    <br/>
    <br/>
    <br/>
@@ -197,9 +197,9 @@ PDFQA는 PDF 문서에서 정보를 검색하고 이를 바탕으로 사용자�
 <br/>
 
   - Ask questions: answer by searching for information in PDF files.
-  - 'Add': Add new PDF files.
-  - 'History': Outputs the current conversation history.
-  - 'Exit': Exits the program.
+  - 'add': Add new PDF files.
+  - 'history': Outputs the current conversation history.
+  - 'exit': Exits the program.
 <br/>
 <br/>
 <br/>
